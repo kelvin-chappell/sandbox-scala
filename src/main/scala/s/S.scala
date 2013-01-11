@@ -14,4 +14,12 @@ class Section(values: List[Int]) {
     val ps = List(p,p,p,p,p,p,p,p,p)
     new Section(ps)
   }
+
+  def f(y:List[Any]) = y.map { i => i match {
+  | case v:Int => v
+    | case s:Seq[Int] => s.filterNot(x => is.contains(x))
+    | }
+  | }
+
+  val is = o.collect { case i:Int => i}
 }
